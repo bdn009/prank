@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <Header>
+
+    </Header>
+    <main class="flex justify-center">
+        <div class="w-[393px] min-h-screen  bg-[#312d2d]/70  text-center ">
+            <div id="gender-screen" class="">
+                <div class="flex flex-col items-center justify-center min-h-screen">
+                    <p class="pb-8 text-xl text-white">Choose Your Gender?</p>
+                    <div class="flex gap-8 justify-center">
+                        <button onclick="genderMale()" class="btn text-white">Male</button>
+                        <button onclick="genderFemale()" class="btn text-white">Female</button>
+                    </div>
+                </div>
+            </div> 
+            <div id="afterMale" class="hidden">
+                <div class="flex flex-col items-center justify-center min-h-screen">
+                    <p class="pb-8 text-xl text-white">Are You Gay?</p>
+                    <div class="flex gap-8 justify-center">
+                        <button onclick="maleYes()" class="rounded-lg px-8 py-2 bg-[#191E24] hover:bg-[#14191E] text-white maleYes">Yes</button>
+                        <button onclick="maleNo()" class="btn text-white maleNo">No</button>
+                    </div>
+                </div>
+            </div>
+            <div id="afterFemale" class="hidden">
+                <div class="flex flex-col items-center justify-center min-h-screen">
+                    <p class="pb-8 text-xl text-white">Do You Love Me?</p>
+                    <div class="flex gap-8 justify-center">
+                        <button onclick="femaleYes()" class=" rounded-lg px-7 py-2 hover:bg-[#1E1914] bg-[#191E24] text-white femaleYes">Yes</button>
+                        <button onclick="femaleNo()" class="btn text-white femaleNo">No</button>
+                    </div>
+                </div>
+            </div>
+            <div id="femaleLast" class="hidden">
+                <div onclick="homeBtn()" class="p-8">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.33337 31.6667V17.18C8.33337 16.7533 8.42893 16.3494 8.62004 15.9683C8.81115 15.5872 9.07449 15.2733 9.41004 15.0267L18.385 8.23C18.855 7.87111 19.3917 7.69167 19.995 7.69167C20.5984 7.69167 21.1384 7.87111 21.615 8.23L30.59 15.025C30.9267 15.2717 31.19 15.5861 31.38 15.9683C31.5712 16.3494 31.6667 16.7533 31.6667 17.18V31.6667C31.6667 32.1133 31.5006 32.5028 31.1684 32.835C30.8362 33.1672 30.4467 33.3333 30 33.3333H24.36C23.9778 33.3333 23.6578 33.2044 23.4 32.9467C23.1423 32.6878 23.0134 32.3678 23.0134 31.9867V24.0383C23.0134 23.6572 22.8845 23.3378 22.6267 23.08C22.3678 22.8211 22.0478 22.6917 21.6667 22.6917H18.3334C17.9523 22.6917 17.6328 22.8211 17.375 23.08C17.1162 23.3378 16.9867 23.6572 16.9867 24.0383V31.9883C16.9867 32.3694 16.8578 32.6889 16.6 32.9467C16.3423 33.2044 16.0228 33.3333 15.6417 33.3333H10C9.55337 33.3333 9.16393 33.1672 8.83171 32.835C8.49948 32.5028 8.33337 32.1133 8.33337 31.6667Z" fill="white"/>
+                    </svg>                        
+                </div>
+                <div class="flex flex-col items-center justify-center min-h-screen -my-32">
+                    <img src="https://i.ibb.co.com/xfwb3Vk/DALL-E-2025-01-12-16-06-12-A-romantic-outdoor-wedding-scene-with-a-couple-getting-married-under-a-be.jpg" alt="">
+                    <p class="py-8 text-xl text-white">Let's Get Married!</p>
+                </div>
+            </div>
+            <div id="maleLast" class="hidden">
+                <div onclick="homeBtn()" class="p-8">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.33337 31.6667V17.18C8.33337 16.7533 8.42893 16.3494 8.62004 15.9683C8.81115 15.5872 9.07449 15.2733 9.41004 15.0267L18.385 8.23C18.855 7.87111 19.3917 7.69167 19.995 7.69167C20.5984 7.69167 21.1384 7.87111 21.615 8.23L30.59 15.025C30.9267 15.2717 31.19 15.5861 31.38 15.9683C31.5712 16.3494 31.6667 16.7533 31.6667 17.18V31.6667C31.6667 32.1133 31.5006 32.5028 31.1684 32.835C30.8362 33.1672 30.4467 33.3333 30 33.3333H24.36C23.9778 33.3333 23.6578 33.2044 23.4 32.9467C23.1423 32.6878 23.0134 32.3678 23.0134 31.9867V24.0383C23.0134 23.6572 22.8845 23.3378 22.6267 23.08C22.3678 22.8211 22.0478 22.6917 21.6667 22.6917H18.3334C17.9523 22.6917 17.6328 22.8211 17.375 23.08C17.1162 23.3378 16.9867 23.6572 16.9867 24.0383V31.9883C16.9867 32.3694 16.8578 32.6889 16.6 32.9467C16.3423 33.2044 16.0228 33.3333 15.6417 33.3333H10C9.55337 33.3333 9.16393 33.1672 8.83171 32.835C8.49948 32.5028 8.33337 32.1133 8.33337 31.6667Z" fill="white"/>
+                    </svg>                        
+                </div>
+                <div class="flex flex-col items-center justify-center min-h-screen -my-32">
+                    <img src="https://i.ibb.co.com/pZFqfqd/91-FE951-F-3451-4-BA5-9481-6-F57-BEA7-B7-BA-1.jpg" alt="">
+                    <p class="py-8 text-xl text-white">May Allah guide you to the right path.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="utility.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
